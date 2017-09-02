@@ -4,6 +4,7 @@ use_frameworks!
 target 'weather_ios' do
     pod 'RxSwift', '~> 3.0'
     pod 'RxCocoa', '~> 3.0'
+    pod 'RxNuke'
     pod 'Moya/RxSwift'
 end
 
