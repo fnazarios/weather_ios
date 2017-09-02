@@ -5,6 +5,15 @@ class CitiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LocationManager.shared.authorization { [weak self] (authorized) in
+            self?.startRefreshing()
+        }
+    }
+    
+    func startRefreshing() {
+        LocationManager.shared.last { (coordinate) in
+            
+        }
     }
 }
-

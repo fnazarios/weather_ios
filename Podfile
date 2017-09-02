@@ -10,6 +10,7 @@ end
 target 'weather_iosTests' do
     use_frameworks!
 
+    pod 'RxCocoa', '~> 3.0'
     pod 'RxBlocking', '~> 3.0'
     pod 'RxTest', '~> 3.0'
 	pod 'Quick'
