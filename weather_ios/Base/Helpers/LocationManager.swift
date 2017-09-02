@@ -22,10 +22,13 @@ final class LocationManager: NSObject {
     func authorization(completion: CompletionAuthorizationHandler? = nil) {
         completionAuthorizationHandler = completion
         
-        if CLLocationManager.authorizationStatus() == .notDetermined {
+        switch CLLocationManager.authorizationStatus() {
+        case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
-        } else {
+        case .authorizedAlways, .authorizedWhenInUse:
             completionAuthorizationHandler?(true)
+        default:
+            break
         }
     }
     

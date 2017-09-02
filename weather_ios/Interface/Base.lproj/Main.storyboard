@@ -13,12 +13,12 @@
         <!--Desafio LuizaLabs-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CitiesViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CitiesViewController" id="BYZ-38-t0r" customClass="CitiesViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MAX-d0-fMD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MAX-d0-fMD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-af-mv6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-af-mv6">
                                                     <rect key="frame" x="15" y="10" width="345" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="9av-B8-Lxp"/>
@@ -45,26 +45,26 @@
                                                         <constraint firstAttribute="width" constant="40" id="rf4-XI-SSw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Céu aberto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIV-NQ-gRa">
-                                                    <rect key="frame" x="63" y="57" width="232" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIV-NQ-gRa">
+                                                    <rect key="frame" x="63" y="57" width="287" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="24º" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B26-gk-bhq">
-                                                    <rect key="frame" x="305" y="47" width="55" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B26-gk-bhq">
+                                                    <rect key="frame" x="360" y="67.5" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min.: 21º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqS-ld-lBM">
-                                                    <rect key="frame" x="112" y="97" width="69.5" height="39"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqS-ld-lBM">
+                                                    <rect key="frame" x="63" y="97" width="132" height="39"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max.: 21º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHH-Z8-8nF">
-                                                    <rect key="frame" x="189.5" y="97" width="69.5" height="39"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHH-Z8-8nF">
+                                                    <rect key="frame" x="190" y="97" width="132" height="39"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                             <constraints>
                                                 <constraint firstItem="B26-gk-bhq" firstAttribute="trailing" secondItem="S4F-af-mv6" secondAttribute="trailing" id="165-OS-Gxl"/>
                                                 <constraint firstItem="pUg-to-HGB" firstAttribute="leading" secondItem="4iZ-ds-hKo" secondAttribute="leading" constant="15" id="1vG-2P-0Qt"/>
-                                                <constraint firstItem="BqS-ld-lBM" firstAttribute="centerX" secondItem="4iZ-ds-hKo" secondAttribute="centerX" constant="-40.75" id="93w-ER-r7Z"/>
+                                                <constraint firstItem="BqS-ld-lBM" firstAttribute="centerX" secondItem="4iZ-ds-hKo" secondAttribute="centerX" constant="-58.5" id="93w-ER-r7Z"/>
                                                 <constraint firstItem="BqS-ld-lBM" firstAttribute="top" secondItem="LIV-NQ-gRa" secondAttribute="bottom" constant="19" id="ApZ-an-KyJ"/>
                                                 <constraint firstItem="LIV-NQ-gRa" firstAttribute="top" secondItem="S4F-af-mv6" secondAttribute="bottom" constant="26" id="Dn3-8O-yCv"/>
                                                 <constraint firstItem="B26-gk-bhq" firstAttribute="leading" secondItem="LIV-NQ-gRa" secondAttribute="trailing" constant="10" id="DpR-Ao-0eP"/>
@@ -81,10 +81,10 @@
                                                 <constraint firstItem="S4F-af-mv6" firstAttribute="leading" secondItem="4iZ-ds-hKo" secondAttribute="leading" constant="15" id="LfE-zH-R1o"/>
                                                 <constraint firstAttribute="trailing" secondItem="S4F-af-mv6" secondAttribute="trailing" constant="15" id="MQl-vu-svE"/>
                                                 <constraint firstItem="B26-gk-bhq" firstAttribute="centerY" secondItem="pUg-to-HGB" secondAttribute="centerY" id="Mbh-Al-OPG"/>
-                                                <constraint firstAttribute="trailing" secondItem="QHH-Z8-8nF" secondAttribute="trailing" constant="116" id="RXO-Ay-wmD"/>
+                                                <constraint firstAttribute="trailing" secondItem="QHH-Z8-8nF" secondAttribute="trailing" constant="53" id="RXO-Ay-wmD"/>
                                                 <constraint firstItem="BqS-ld-lBM" firstAttribute="width" secondItem="QHH-Z8-8nF" secondAttribute="width" id="Trd-t5-g1s"/>
                                                 <constraint firstItem="S4F-af-mv6" firstAttribute="top" secondItem="4iZ-ds-hKo" secondAttribute="top" constant="10" id="XPe-SR-hdR"/>
-                                                <constraint firstItem="QHH-Z8-8nF" firstAttribute="centerX" secondItem="4iZ-ds-hKo" secondAttribute="centerX" constant="36.75" id="YZR-eE-Tae"/>
+                                                <constraint firstItem="QHH-Z8-8nF" firstAttribute="centerX" secondItem="4iZ-ds-hKo" secondAttribute="centerX" constant="68.5" id="YZR-eE-Tae"/>
                                                 <constraint firstItem="QHH-Z8-8nF" firstAttribute="centerY" secondItem="BqS-ld-lBM" secondAttribute="centerY" id="YdH-Ye-DIS"/>
                                                 <constraint firstItem="LIV-NQ-gRa" firstAttribute="centerY" secondItem="pUg-to-HGB" secondAttribute="centerY" id="g5s-Xe-jRk"/>
                                                 <constraint firstItem="pUg-to-HGB" firstAttribute="top" secondItem="S4F-af-mv6" secondAttribute="bottom" constant="16" id="jGz-V9-iR8"/>
@@ -116,17 +116,49 @@
                     </view>
                     <navigationItem key="navigationItem" title="Desafio LuizaLabs" id="N0d-kp-wFx">
                         <rightBarButtonItems>
-                            <barButtonItem image="icon_list" id="dlW-0F-swq"/>
-                            <barButtonItem title="Fº" id="c3c-AX-rcm"/>
+                            <barButtonItem image="icon_map" id="dlW-0F-swq"/>
+                            <barButtonItem title="Fº" id="c3c-AX-rcm">
+                                <connections>
+                                    <action selector="unitButtonTapped" destination="BYZ-38-t0r" id="FQT-ob-p5G"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="citiesTableView" destination="MAX-d0-fMD" id="dOo-Lc-WrG"/>
+                        <outlet property="mapViewButton" destination="dlW-0F-swq" id="YFX-y1-UyJ"/>
+                        <outlet property="unitButton" destination="c3c-AX-rcm" id="wmu-hy-Shc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896.79999999999995" y="490.70464767616198"/>
+            <point key="canvasLocation" x="1785" y="389"/>
+        </scene>
+        <!--Map Cities View Controller-->
+        <scene sceneID="ztM-Ab-rZV">
+            <objects>
+                <viewController storyboardIdentifier="MapCitiesViewController" id="Eva-ab-z4M" customClass="MapCitiesViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="clJ-Te-0W8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neQ-tY-wS8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="neQ-tY-wS8" firstAttribute="leading" secondItem="dEN-Nu-phW" secondAttribute="leading" id="01g-sj-SQY"/>
+                            <constraint firstItem="neQ-tY-wS8" firstAttribute="bottom" secondItem="dEN-Nu-phW" secondAttribute="bottom" id="CFg-Ii-BKx"/>
+                            <constraint firstItem="neQ-tY-wS8" firstAttribute="top" secondItem="clJ-Te-0W8" secondAttribute="top" id="Oq7-cn-UiE"/>
+                            <constraint firstItem="neQ-tY-wS8" firstAttribute="trailing" secondItem="dEN-Nu-phW" secondAttribute="trailing" id="a9C-xg-y7k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dEN-Nu-phW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2c-6s-xLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="1117.6911544227887"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q5J-HZ-JV6">
@@ -139,15 +171,45 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="c0n-N5-1ZR"/>
+                        <segue destination="1yA-wo-P5i" kind="relationship" relationship="rootViewController" id="6KQ-Bt-4HP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtK-hw-weh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136" y="491.15442278860576"/>
         </scene>
+        <!--Desafio LuizaLabs-->
+        <scene sceneID="QZT-1u-LKq">
+            <objects>
+                <viewController id="1yA-wo-P5i" customClass="MainViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NlQ-na-CbF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEa-h7-4zm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GEa-h7-4zm" firstAttribute="leading" secondItem="O76-uT-Xtr" secondAttribute="leading" id="3BL-sg-GQh"/>
+                            <constraint firstItem="GEa-h7-4zm" firstAttribute="trailing" secondItem="O76-uT-Xtr" secondAttribute="trailing" id="5bc-0Q-0UP"/>
+                            <constraint firstItem="GEa-h7-4zm" firstAttribute="bottom" secondItem="O76-uT-Xtr" secondAttribute="bottom" id="Cyy-jC-zeu"/>
+                            <constraint firstItem="GEa-h7-4zm" firstAttribute="top" secondItem="NlQ-na-CbF" secondAttribute="top" id="GhX-qM-22X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O76-uT-Xtr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Desafio LuizaLabs" id="dsS-e4-Shf"/>
+                    <connections>
+                        <outlet property="containerView" destination="GEa-h7-4zm" id="3mD-Wy-QGO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9g-au-dI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.79999999999995" y="487.10644677661173"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="icon_list" width="33" height="33"/>
+        <image name="icon_map" width="26" height="26"/>
     </resources>
 </document>

@@ -29,6 +29,11 @@
 		6A2F64731F5B001D004CF169 /* Optional+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F64721F5B001D004CF169 /* Optional+Rx.swift */; };
 		6A2F64751F5B0106004CF169 /* CityCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F64741F5B0106004CF169 /* CityCellViewModelSpec.swift */; };
 		6A2F647A1F5B012F004CF169 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F64621F5AF5D8004CF169 /* CityTableViewCell.swift */; };
+		6AC9E8031F5B3FAE0090E8F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC9E8021F5B3FAE0090E8F1 /* MainViewController.swift */; };
+		6AC9E8051F5B40AD0090E8F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC9E8041F5B40AD0090E8F1 /* Constants.swift */; };
+		6AC9E8071F5B41070090E8F1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC9E8061F5B41070090E8F1 /* UIViewController.swift */; };
+		6AC9E80A1F5B45BB0090E8F1 /* MapCitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC9E8091F5B45BB0090E8F1 /* MapCitiesViewController.swift */; };
+		6AC9E80C1F5B50BF0090E8F1 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC9E80B1F5B50BF0090E8F1 /* Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,11 @@
 		6A2F64701F5AFF3A004CF169 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		6A2F64721F5B001D004CF169 /* Optional+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Rx.swift"; sourceTree = "<group>"; };
 		6A2F64741F5B0106004CF169 /* CityCellViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCellViewModelSpec.swift; sourceTree = "<group>"; };
+		6AC9E8021F5B3FAE0090E8F1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6AC9E8041F5B40AD0090E8F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6AC9E8061F5B41070090E8F1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		6AC9E8091F5B45BB0090E8F1 /* MapCitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCitiesViewController.swift; sourceTree = "<group>"; };
+		6AC9E80B1F5B50BF0090E8F1 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		AB8E562D2253A7119D659F56 /* Pods-weather_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weather_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weather_ios/Pods-weather_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		BDEBB0B915F47C1422BC2709 /* Pods_weather_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weather_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8A5D9D86ECDDE11F71EDAB /* Pods-weather_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weather_iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weather_iosTests/Pods-weather_iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +205,8 @@
 		6A07DD6B1F5AD337008B78D6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				6AC9E8011F5B3F8C0090E8F1 /* Main */,
+				6AC9E8081F5B45A40090E8F1 /* MapCities */,
 				6A07DD6D1F5AD3CA008B78D6 /* Cities */,
 			);
 			path = Features;
@@ -243,6 +255,8 @@
 			children = (
 				6A2F64691F5AF7B2004CF169 /* Action.swift */,
 				6A2F646B1F5AF9A5004CF169 /* LocationManager.swift */,
+				6AC9E8041F5B40AD0090E8F1 /* Constants.swift */,
+				6AC9E80B1F5B50BF0090E8F1 /* Loading.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -252,6 +266,7 @@
 			children = (
 				6A2F64701F5AFF3A004CF169 /* Double.swift */,
 				6A2F64721F5B001D004CF169 /* Optional+Rx.swift */,
+				6AC9E8061F5B41070090E8F1 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -265,6 +280,22 @@
 				6A2F646D1F5AFE0D004CF169 /* CityCellViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6AC9E8011F5B3F8C0090E8F1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6AC9E8021F5B3FAE0090E8F1 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6AC9E8081F5B45A40090E8F1 /* MapCities */ = {
+			isa = PBXGroup;
+			children = (
+				6AC9E8091F5B45BB0090E8F1 /* MapCitiesViewController.swift */,
+			);
+			path = MapCities;
 			sourceTree = "<group>";
 		};
 		B4D40486E33339FB98DE5C9B /* Frameworks */ = {
@@ -440,6 +471,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxNuke/RxNuke.framework",
@@ -450,6 +482,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxNuke.framework",
@@ -545,17 +578,22 @@
 			files = (
 				6A07DD7D1F5AE4B3008B78D6 /* OpenWeatherApi+Rx.swift in Sources */,
 				6A2C537C1F5B061400879A66 /* CityCellViewModel.swift in Sources */,
+				6AC9E80C1F5B50BF0090E8F1 /* Loading.swift in Sources */,
 				6A07DD701F5AD70F008B78D6 /* OpenWeatherApi.swift in Sources */,
 				6A2F646C1F5AF9A5004CF169 /* LocationManager.swift in Sources */,
 				6A2C537B1F5B061400879A66 /* CitiesViewModel.swift in Sources */,
 				6A2F64711F5AFF3A004CF169 /* Double.swift in Sources */,
 				6A2F646A1F5AF7B2004CF169 /* Action.swift in Sources */,
+				6AC9E8051F5B40AD0090E8F1 /* Constants.swift in Sources */,
+				6AC9E8071F5B41070090E8F1 /* UIViewController.swift in Sources */,
 				6A07DD3E1F5AD313008B78D6 /* CitiesViewController.swift in Sources */,
 				6A2F647A1F5B012F004CF169 /* CityTableViewCell.swift in Sources */,
+				6AC9E8031F5B3FAE0090E8F1 /* MainViewController.swift in Sources */,
 				6A07DD3C1F5AD313008B78D6 /* AppDelegate.swift in Sources */,
 				6A07DD731F5AD981008B78D6 /* EnvironmentUtil.swift in Sources */,
 				6A07DD791F5AE0E4008B78D6 /* Search.swift in Sources */,
 				6A2F64731F5B001D004CF169 /* Optional+Rx.swift in Sources */,
+				6AC9E80A1F5B45BB0090E8F1 /* MapCitiesViewController.swift in Sources */,
 				6A07DD7B1F5AE20E008B78D6 /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,7 +766,7 @@
 				BASE_URL = "http://api.openweathermap.org";
 				BASE_URL_ICON = "http://openweathermap.org/img/w";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J8T35JT7PR;
+				DEVELOPMENT_TEAM = 4R862UQPU2;
 				INFOPLIST_FILE = weather_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OPEN_WEATHER_MAP_API_KEY = c7cea5a67a75c97651eed69251569b02;
@@ -748,7 +786,7 @@
 				BASE_URL = "http://api.openweathermap.org";
 				BASE_URL_ICON = "http://openweathermap.org/img/w";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J8T35JT7PR;
+				DEVELOPMENT_TEAM = 4R862UQPU2;
 				INFOPLIST_FILE = weather_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OPEN_WEATHER_MAP_API_KEY = c7cea5a67a75c97651eed69251569b02;
