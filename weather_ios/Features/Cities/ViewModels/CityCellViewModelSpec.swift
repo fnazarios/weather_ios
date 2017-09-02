@@ -8,13 +8,14 @@ class CityCellViewModelSpec: QuickSpec {
     private let disposeBag = DisposeBag()
     
     override func spec() {
+        let main = Main(temp: 291.23, pressure: 1029, humidity: 23, tempMin: 289.15, tempMax: 295.15)
+        let weather = Weather(id: 1, main: "Ensolarado", description: "Ensolarado", icon: "04d")
+        let coord = Coordinate(lat: 0.0, lon: 0.0)
+        let city = City(id: 100, name: "Krakovia", coord: coord, main: main, weather: [weather])
+        
         fdescribe("show city weather") {
             
             fdescribe("in celsius") {
-                let main = Main(temp: 291.23, pressure: 1029, humidity: 23, tempMin: 289.15, tempMax: 295.15)
-                let weather = Weather(id: 1, main: "Ensolarado", description: "Ensolarado", icon: "04d")
-                let city = City(id: 100, name: "Krakovia", main: main, weather: [weather])
-                
                 let viewModel: CityCellViewModelType = CityCellViewModel()
                 var cityName: String?
                 var temp: String?
@@ -47,10 +48,6 @@ class CityCellViewModelSpec: QuickSpec {
             }
             
             fdescribe("in fahrenheit") {
-                let main = Main(temp: 291.23, pressure: 1029, humidity: 23, tempMin: 289.15, tempMax: 295.15)
-                let weather = Weather(id: 1, main: "Ensolarado", description: "Ensolarado", icon: "04d")
-                let city = City(id: 100, name: "Krakovia", main: main, weather: [weather])
-                
                 let viewModel: CityCellViewModelType = CityCellViewModel()
                 var temp: String?
                 
