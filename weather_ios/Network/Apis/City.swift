@@ -2,7 +2,7 @@ import Foundation
 
 struct Main: Codable {
     let temp: Double
-    let pressure: Int
+    let pressure: Double
     let humidity: Int
     let tempMin: Double
     let tempMax: Double

@@ -1,6 +1,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Action
 
 protocol CitiesViewModelInputs {
     func weatherFrom(lat: Double, lon: Double, count: Int)
