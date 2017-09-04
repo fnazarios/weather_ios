@@ -169,6 +169,7 @@
 		6A07DD4F1F5AD313008B78D6 /* weather_iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				6A2F64761F5B010F004CF169 /* ViewModels */,
 				6A07DD521F5AD313008B78D6 /* Info.plist */,
 			);
 			path = weather_iosTests;
@@ -225,7 +226,8 @@
 		6A07DD6D1F5AD3CA008B78D6 /* Cities */ = {
 			isa = PBXGroup;
 			children = (
-				6A2F64761F5B010F004CF169 /* ViewModels */,
+				6A2F64641F5AF6B8004CF169 /* CitiesViewModel.swift */,
+				6A2F646D1F5AFE0D004CF169 /* CityCellViewModel.swift */,
 				6A2F64621F5AF5D8004CF169 /* CityTableViewCell.swift */,
 				6A07DD3D1F5AD313008B78D6 /* CitiesViewController.swift */,
 			);
@@ -275,9 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				6A2F64661F5AF72E004CF169 /* CitiesViewModelSpec.swift */,
-				6A2F64641F5AF6B8004CF169 /* CitiesViewModel.swift */,
 				6A2F64741F5B0106004CF169 /* CityCellViewModelSpec.swift */,
-				6A2F646D1F5AFE0D004CF169 /* CityCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
