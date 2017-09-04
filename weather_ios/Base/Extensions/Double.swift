@@ -1,6 +1,6 @@
 import Foundation
 
-enum PreferredUnit {
+enum PreferredUnit: Int {
     case celsius
     case kelvin
     case fahrenheit

@@ -1,6 +1,7 @@
 import Foundation
 import RxSwift
 import Moya
+import os.log
 
 enum ApiError: Swift.Error {
     case badRequest
@@ -29,6 +30,8 @@ extension ObservableType where E: Response {
     func statusCodes(_ range: ClosedRange<Int>) -> Observable<E> {
         return flatMap { response -> Observable<E> in
             
+            log(response)
+            
             guard range.contains(response.statusCode) else {
                 throw ApiError.from(statusCode: response.statusCode)
             }
@@ -47,4 +50,9 @@ extension ObservableType where E: Response {
             }
         }
     }
+}
+
+func log(_ response: Response) {
+    os_log("%@", log: .default, type: .debug, "\(response.request?.httpMethod ?? "") at \(response.request?.url?.absoluteString ?? "") \(response.statusCode)")
+    os_log("%@", log: .default, type: .debug, "\(String(data: response.data, encoding: String.Encoding.utf8) ?? "")")
 }
