@@ -7,12 +7,15 @@ class CitiesViewController: UIViewController {
     @IBOutlet weak var citiesTableView: UITableView!
     @IBOutlet weak var mapViewButton: UIBarButtonItem!
     @IBOutlet weak var unitButton: UIBarButtonItem!
-    
+
     private var refreshControl = UIRefreshControl()
+    private let loadingView = Loading()
+    private let bannerMessage = Banner()
+    
+    private var currentUnit: PreferredUnit = .celsius
+    
     private let viewModel: CitiesViewModelType = CitiesViewModel()
     private let disposeBag = DisposeBag()
-    private var currentUnit: PreferredUnit = .celsius
-    private let loadingView = Loading()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +24,11 @@ class CitiesViewController: UIViewController {
         citiesTableView.estimatedRowHeight = 80
         
         bindViewModel()
+        bindLocalizationServices()
+        setupRefreshControl()
         
-        LocationManager.shared.authorization { [weak self] (authorized) in
-            self?.loadingView.show()
-            self?.startRefreshing()
-        }
-        
+        LocationManager.shared.requestAuthorization()
+
         NotificationCenter.default.addObserver(forName: preferredUnitChanged, object: nil, queue: nil) { [weak self] (notification) in
             guard let unit = notification.object as? PreferredUnit else { return }
             
@@ -35,18 +37,37 @@ class CitiesViewController: UIViewController {
         }
     }
     
-    func bindViewModel() {
+    func setupRefreshControl() {
         refreshControl.rx.controlEvent(.valueChanged)
             .subscribe(onNext: { [weak self] (_) in
                 self?.startRefreshing()
             })
             .addDisposableTo(disposeBag)
+    }
+    
+    func bindLocalizationServices() {
+        LocationManager.shared.notAuthorizedMessage
+            .bind(to: bannerMessage.rx.failureMessage)
+            .addDisposableTo(disposeBag)
         
-        viewModel.outputs.isLoading
+        LocationManager.shared.isAuthorized
+            .filter({ $0 == true })
+            .bind { [weak self] (_) in
+                self?.startRefreshing()
+            }
+            .addDisposableTo(disposeBag)
+    }
+    
+    func bindViewModel() {
+        let isShowLoading = Observable.from([viewModel.outputs.isLoading.asObservable(), LocationManager.shared.isExecuting])
+            .merge()
+            .asDriver(onErrorJustReturn: false)
+        
+        isShowLoading
             .drive(refreshControl.rx.isRefreshing)
             .addDisposableTo(disposeBag)
         
-        viewModel.outputs.isLoading
+        isShowLoading
             .drive(loadingView.rx.isShow)
             .addDisposableTo(disposeBag)
         
@@ -58,8 +79,10 @@ class CitiesViewController: UIViewController {
     }
     
     func startRefreshing() {
-        LocationManager.shared.last { [weak self] (coordinate) in
-            self?.viewModel.inputs.weatherFrom(lat: coordinate?.latitude ?? 0.0, lon: coordinate?.longitude ?? 0.0, count: 50)
-        }
+        LocationManager.shared.last
+            .bind { [weak self] (coordinate) in
+                self?.viewModel.inputs.weatherFrom(lat: coordinate.latitude, lon: coordinate.longitude, count: 50)
+            }
+            .addDisposableTo(disposeBag)
     }
 }

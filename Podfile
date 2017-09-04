@@ -7,6 +7,7 @@ target 'weather_ios' do
     pod 'RxNuke'
     pod 'Moya/RxSwift'
     pod 'PKHUD', '~> 4.0'
+    pod 'SwiftyDrop', '~>3.0'
 end
 
 target 'weather_iosTests' do
