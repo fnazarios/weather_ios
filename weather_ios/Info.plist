@@ -18,8 +18,34 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>EnviromentSetting</key>
+	<dict>
+		<key>BASE_URL</key>
+		<string>$(BASE_URL)</string>
+		<key>BASE_URL_ICON</key>
+		<string>$(BASE_URL_ICON)</string>
+		<key>OPEN_WEATHER_MAP_API_KEY</key>
+		<string>$(OPEN_WEATHER_MAP_API_KEY)</string>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>api.openweathermap.org</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need to access your location to show the current weather </string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -31,8 +57,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -41,31 +65,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>api.openweathermap.org</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-			</dict>
-		</dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need to access your location to show the current weather </string>
-	<key>EnviromentSetting</key>
-	<dict>
-		<key>BASE_URL_ICON</key>
-		<string>$(BASE_URL_ICON)</string>
-		<key>BASE_URL</key>
-		<string>$(BASE_URL)</string>
-		<key>OPEN_WEATHER_MAP_API_KEY</key>
-		<string>$(OPEN_WEATHER_MAP_API_KEY)</string>
-	</dict>
 </dict>
 </plist>

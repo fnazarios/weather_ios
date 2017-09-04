@@ -67,14 +67,14 @@ final class CityCellViewModel: CityCellViewModelType, CityCellViewModelInputs, C
             .withLatestFrom(preferredUnit, resultSelector: { (temp, preferUnit) -> String in
                 return temp.toPreferedUnit(preferUnit)
             })
-            .map { "Min.: \($0)" }
+            .map { "Min.: \($0)º" }
         
         max = city
             .map { $0.main.tempMax }
             .withLatestFrom(preferredUnit, resultSelector: { (temp, preferUnit) -> String in
                 return temp.toPreferedUnit(preferUnit)
             })
-            .map { "Max.: \($0)" }
+            .map { "Max.: \($0)º" }
     }
     
     private let configureWithCityProperty = PublishSubject<(city: City, unit: PreferredUnit)>()

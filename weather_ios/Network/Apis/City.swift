@@ -23,9 +23,15 @@ struct Weather: Codable {
     let icon: String
 }
 
+struct Coordinate: Codable {
+    let lat: Double
+    let lon: Double
+}
+
 struct City: Codable {
     let id: Int
     let name: String
+    let coord: Coordinate
     let main: Main
     let weather: [Weather]
 }
